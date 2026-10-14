@@ -1,0 +1,11 @@
+CREATE DATABASE IF NOT EXISTS employee_management;
+
+USE employee_management;
+
+CREATE TABLE IF NOT EXISTS employees (
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    department VARCHAR(100) NOT NULL,
+    salary DECIMAL(10, 2) NOT NULL
+);
